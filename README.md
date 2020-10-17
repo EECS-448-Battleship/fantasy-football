@@ -1,7 +1,5 @@
-# Battleship
-## EECS 448 - Project 1
-
-This is a basic battleship game created as our submission for project 1 for EECS 448 at the University of Kansas.
+# Fantasy Football
+## EECS 448 - Projects 3 & 4
 
 ## Structure Info
 This project has been wired up to use Vue.js to help organize components of the game.
