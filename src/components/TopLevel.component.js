@@ -9,6 +9,10 @@ const template = `
             <li class="navbar-item" v-for="item of navbar_items" :class="{ active: current_route === item.page }">
                 <app-link :href="item.page" :text="item.title"></app-link>
             </li>
+            
+            <li class="navbar-item">
+                <a href="#" @click="on_refresh($event)">Refresh</a>
+            </li>
         </ul>
     </div>
     <div class="page-container">
@@ -59,6 +63,12 @@ class TopLevelComponent extends Component {
         if ( !this.current_route ) {
             // router.navigate('my-team')
         }
+
+        const url_params = new URLSearchParams(window.location.search)
+        if ( url_params.has('then') ) {
+            const route = url_params.get('then')
+            router.navigate(route)
+        }
     }
 
     /**
@@ -81,6 +91,10 @@ class TopLevelComponent extends Component {
         if ( path.endsWith('/') ) path = path.slice(0, -1)
 
         this.current_route = path
+    }
+
+    on_refresh($event) {
+        window.location.href = `/?then=${this.current_route}`
     }
 }
 
