@@ -46,6 +46,17 @@ export default class LeagueComponent extends Component {
             header: 'Stats',
             key: 'stats',
         },
+        {
+            header: '',
+            key: 'team_name',
+            type: GridCellRenderType.Component,
+            component: Vue.component('app-action-button'),
+            button_color: '#CC5746',
+            button_text: 'Test Action',
+            on_click: (row, col) => {
+                console.log('button clicked!')
+            },
+        }
     ]
 
     data = [

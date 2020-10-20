@@ -21,7 +21,7 @@ const template = `
                 <div v-if="!col.type || col.type === GridCellRenderType.Simple">{{ row[col.key] }}</div>
                 <div v-if="col.type === GridCellRenderType.HTML" v-html="col.renderer(row[col.key], row)"></div>
                 <div v-if="col.type === GridCellRenderType.Component">
-                    <component :is="col.component" :row="row" :col="col" :idx="idx"></component>
+                    <component :is="col.component" :row="row" :col="col" :idx="idx" @click="col.on_click"></component>
                 </div>
             </td>
         </tr>

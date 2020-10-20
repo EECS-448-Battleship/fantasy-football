@@ -6,6 +6,7 @@ import ScoresComponent from './components/pages/Scores.component.js'
 import LeagueComponent from './components/pages/League.component.js'
 import DraftBoardComponent from './components/pages/DraftBoard.component.js'
 import GridComponent from './components/Grid.component.js'
+import GridActionButtonComponent from './components/GridActionButton.component.js'
 
 /*
  * This is where various components we define should be registered.
@@ -20,4 +21,5 @@ export default {
     LeagueComponent,
     DraftBoardComponent,
     GridComponent,
+    GridActionButtonComponent,
 }
