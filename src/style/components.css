@@ -62,3 +62,33 @@ body {
     text-decoration: none;
     padding: 15px;
 }
+
+/******** SHARED GRID STYLES ********/
+.component-app-grid table {
+    width: 100%;
+    border: 1px solid var(--color-text-dark);
+    border-collapse: collapse;
+}
+
+.component-app-grid th, .component-app-grid td {
+    padding: 10px;
+    border: 1px solid var(--color-text-dark);
+    border-collapse: collapse;
+}
+
+div.center {
+    display: table;
+    align-items: center;
+    text-align: center;
+}
+
+div.center img {
+    vertical-align: middle;
+    display: table-cell;
+}
+
+div.center span {
+    padding: 10px;
+    vertical-align: middle;
+    display: table-cell;
+}
