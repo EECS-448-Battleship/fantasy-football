@@ -7,6 +7,9 @@ const template = `
             <h2>Add Players to Team</h2>
         </div>
         <div class="right">
+            <button :class="{ selected: my_team_only }" @click="to_my_team_only()">My Team</button><button :class="{ selected: !my_team_only }" @click="to_all_players()">All Players</button>
+        </div>
+        <div class="right">
             <input type="text" placeholder="Quick filter..." v-model="quick_filter" @keyup="on_filter_change()">
         </div>
     </div>
@@ -19,8 +22,17 @@ const template = `
                 <h1>{{ player.name }}</h1>
                 <p>#{{ player.number }} ({{ player.position }})</p>
             </div>
-            <div class="item-button add">
-                <button>Add to Team</button>
+            <div class="item-button">
+                <button
+                    v-if="my_team.length < 15 && !my_team.includes(player)"
+                    @click="add_to_team(player)"
+                    class="add"
+                >Add to Team</button>
+                <button
+                    v-if="my_team.includes(player)"
+                    @click="remove_from_team(player)"
+                    class="remove"
+                >Remove from Team</button>
             </div>
         </div>
     </div>
@@ -32,12 +44,14 @@ export default class AddPlayersComponent extends Component {
     static get template() { return template }
 
     quick_filter = ''
+    my_team_only = false
 
-    my_team = Array(16).fill(undefined);
+    my_team = [];
 
     filtered_players = [];
+    possible_players = [];
 
-    possible_players = [
+    all_players = [
         {
             "number": 14,
             "name": "Andy Dalton",
@@ -353,6 +367,7 @@ export default class AddPlayersComponent extends Component {
     ]
 
     async vue_on_create() {
+        this.possible_players = [...this.all_players];
         this.filtered_players = [...this.possible_players];
     }
 
@@ -362,5 +377,28 @@ export default class AddPlayersComponent extends Component {
             if ( !query ) return true;
             return x.name.toLowerCase().includes(query) || x.position.toLowerCase().includes(query)
         })
+    }
+
+    to_my_team_only() {
+        this.my_team_only = true;
+        this.possible_players = [...this.my_team]
+        this.on_filter_change()
+    }
+
+    to_all_players() {
+        this.my_team_only = false;
+        this.possible_players = [...this.all_players]
+        this.on_filter_change()
+    }
+
+    add_to_team(player) {
+        if ( !this.my_team.includes(player) ) {
+            this.my_team.push(player)
+        }
+    }
+
+    remove_from_team(player) {
+        this.my_team = this.my_team.filter(x => x !== player)
+        if ( this.my_team_only ) this.to_my_team_only()
     }
 }

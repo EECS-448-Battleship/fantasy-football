@@ -121,6 +121,22 @@ div.center span {
     margin-right: 20px;
 }
 
+.page-add-players .header .right button {
+    margin: 0;
+    margin-top: 25px;
+    border: 1px solid lightgray;
+    padding: 5px 20px;
+}
+
+.page-add-players .header .right button:hover:not(.selected) {
+    background: lightgrey;
+    cursor: pointer;
+}
+
+.page-add-players .header .right button.selected {
+    background: darkgrey;
+}
+
 .page-add-players .header input {
     border: 1px solid lightgray;
     padding: 5px;
@@ -157,15 +173,28 @@ div.center span {
     font-size: 1.5em;
 }
 
-.page-add-players .item-grid .item .item-button.add button {
+.page-add-players .item-grid .item .item-button button {
     width: 100%;
-    border: 1px solid #009900;
-    background: darkgreen;
     color: white;
     border-radius: 5px;
 }
 
-.page-add-players .item-grid .item .item-button.add button:hover {
+.page-add-players .item-grid .item .item-button button.add {
+    border: 1px solid #009900;
+    background: darkgreen;
+}
+
+.page-add-players .item-grid .item .item-button button.add:hover {
     background: #009900;
+    cursor: pointer;
+}
+
+.page-add-players .item-grid .item .item-button button.remove {
+    border: 1px solid #ff1a1a;
+    background: #cc0000;
+}
+
+.page-add-players .item-grid .item .item-button button.remove:hover {
+    background: #ff1a1a;
     cursor: pointer;
 }
