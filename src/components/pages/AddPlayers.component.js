@@ -3,10 +3,15 @@ import {Component} from '../../../lib/vues6.js'
 const template = `
 <div class="page-add-players">
     <div class="header">
-        <h2>Add Players to Team</h2>
+        <div class="left">
+            <h2>Add Players to Team</h2>
+        </div>
+        <div class="right">
+            <input type="text" placeholder="Quick filter..." v-model="quick_filter" @keyup="on_filter_change()">
+        </div>
     </div>
     <div class="item-grid">
-        <div class="item" v-for="player of possible_players">
+        <div class="item" v-for="player of filtered_players">
             <div class="item-icon">
                 <img :src="player.image" :alt="player.name">
             </div>
@@ -26,7 +31,11 @@ export default class AddPlayersComponent extends Component {
     static get props() { return [] }
     static get template() { return template }
 
+    quick_filter = ''
+
     my_team = Array(16).fill(undefined);
+
+    filtered_players = [];
 
     possible_players = [
         {
@@ -344,6 +353,14 @@ export default class AddPlayersComponent extends Component {
     ]
 
     async vue_on_create() {
+        this.filtered_players = [...this.possible_players];
+    }
 
+    on_filter_change() {
+        const query = this.quick_filter.toLowerCase()
+        this.filtered_players = this.possible_players.filter(x => {
+            if ( !query ) return true;
+            return x.name.toLowerCase().includes(query) || x.position.toLowerCase().includes(query)
+        })
     }
 }

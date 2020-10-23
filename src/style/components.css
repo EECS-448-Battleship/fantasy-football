@@ -109,6 +109,23 @@ div.center span {
 
 .page-add-players .header {
     padding-left: 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+.page-add-players .header .left {
+    flex: 1;
+}
+
+.page-add-players .header .right {
+    margin-right: 20px;
+}
+
+.page-add-players .header input {
+    border: 1px solid lightgray;
+    padding: 5px;
+    border-radius: 3px;
+    margin-top: 24px;
 }
 
 .page-add-players .item-grid {
