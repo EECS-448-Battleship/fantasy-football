@@ -18,6 +18,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+    overflow-y: scroll;
 }
 
 .top-level-container {
@@ -30,6 +31,8 @@ body {
 .navbar-container {
     background: var(--color-text-light);
     color: var(--color-text-dark);
+    position: fixed;
+    width: 100%;
 }
 
 .navbar-container .title {
@@ -63,6 +66,10 @@ body {
     padding: 15px;
 }
 
+.page-container {
+    margin-top: 130px;
+}
+
 /******** SHARED GRID STYLES ********/
 .component-app-grid table {
     width: 100%;
@@ -91,4 +98,57 @@ div.center span {
     padding: 10px;
     vertical-align: middle;
     display: table-cell;
+}
+
+
+/********* ADD PLAYERS PAGE **********/
+.page-add-players {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-add-players .header {
+    padding-left: 15px;
+}
+
+.page-add-players .item-grid {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    height: 270px;
+    flex-wrap: wrap;
+}
+
+.page-add-players .item-grid .item {
+    margin: 15px;
+    border: 1px solid darkgrey;
+    border-radius: 5px;
+    padding: 10px;
+    min-width: 160px;
+}
+
+.page-add-players .item-grid .item .item-icon {
+    text-align: center;
+}
+
+.page-add-players .item-grid .item .item-icon img {
+    height: 100px;
+    border-radius: 50%;
+}
+
+.page-add-players .item-grid .item .item-contents h1 {
+    font-size: 1.5em;
+}
+
+.page-add-players .item-grid .item .item-button.add button {
+    width: 100%;
+    border: 1px solid #009900;
+    background: darkgreen;
+    color: white;
+    border-radius: 5px;
+}
+
+.page-add-players .item-grid .item .item-button.add button:hover {
+    background: #009900;
+    cursor: pointer;
 }
