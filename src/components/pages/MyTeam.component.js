@@ -2,7 +2,9 @@ import {Component} from '../../../lib/vues6.js'
 
 const template = `
 <div class="page-my-team">
-My Team
+    <div class="left">
+    <h2>Add Players to Team</h2>
+    </div>
 </div>
 `
 export default class MyTeamComponent extends Component {
