@@ -100,41 +100,40 @@ div.center span {
     display: table-cell;
 }
 
-
-/********* ADD PLAYERS PAGE **********/
-.page-add-players {
-    display: flex;
-    flex-direction: column;
-}
-
-.page-add-players .header {
+.header {
     padding-left: 15px;
     display: flex;
     flex-direction: row;
 }
 
-.page-add-players .header .left {
+.header .left {
     flex: 1;
 }
 
-.page-add-players .header .right {
+.header .right {
     margin-right: 20px;
 }
 
-.page-add-players .header .right button {
+.header .right button {
     margin: 0;
     margin-top: 25px;
     border: 1px solid lightgray;
     padding: 5px 20px;
 }
 
-.page-add-players .header .right button:hover:not(.selected) {
+.header .right button:hover:not(.disable-click) {
     background: lightgrey;
     cursor: pointer;
 }
 
-.page-add-players .header .right button.selected {
+.header .right button.disable-click {
     background: darkgrey;
+}
+
+/********* ADD PLAYERS PAGE **********/
+.page-add-players {
+    display: flex;
+    flex-direction: column;
 }
 
 .page-add-players .header input {

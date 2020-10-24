@@ -7,7 +7,7 @@ const template = `
             <h2>Add Players to Team</h2>
         </div>
         <div class="right">
-            <button :class="{ selected: my_team_only }" @click="to_my_team_only()">My Team</button><button :class="{ selected: !my_team_only }" @click="to_all_players()">All Players</button>
+            <button :class="{ 'disable-click': my_team_only }" @click="to_my_team_only()">My Team</button><button :class="{ 'disable-click': !my_team_only }" @click="to_all_players()">All Players</button>
         </div>
         <div class="right">
             <input type="text" placeholder="Quick filter..." v-model="quick_filter" @keyup="on_filter_change()">
