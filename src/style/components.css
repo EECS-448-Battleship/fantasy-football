@@ -100,7 +100,6 @@ div.center span {
     display: table-cell;
 }
 
-<<<<<<< HEAD
 #ranking{
     text-align: center;
 }
@@ -108,7 +107,7 @@ div.center span {
 #record{
     text-align: center;
 }
-=======
+
 .header {
     padding-left: 15px;
     display: flex;
@@ -220,4 +219,3 @@ div.center span {
     font-family: 'Roboto Condensed', sans-serif;
     flex: 1;
 }
->>>>>>> db71e5125ae5257a7d679f849b37b3ab95066853
