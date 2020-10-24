@@ -84,7 +84,12 @@ export default class MyTeamComponent extends Component {
                 if ( !data.player_name ) {
                     return `<i style="color: darkgrey">none</i>`
                 } else {
-                    return data.player_name
+                    return `
+                        <div class="center">
+                            <img src="${data.image}" alt="${data.player_name}" height="50" style="border-radius: 50%">
+                            <span>${data.player_name}</span>
+                        </div>
+                    `
                 }
             },
         },
@@ -103,7 +108,21 @@ export default class MyTeamComponent extends Component {
                 return this.moving_player && this.moving_player.player_name === row.player_name;
             },
             on_click: (row, col) => {
-                this.moving_player = row;
+                if ( !this.moving_player ) {
+                    this.moving_player = row;
+                } else {
+                    const old_row = {...row};
+                    row.player_name = this.moving_player.player_name;
+                    row.ecr = this.moving_player.ecr;
+                    row.image = this.moving_player.image;
+
+                    this.moving_player.player_name = old_row.player_name;
+                    this.moving_player.ecr = old_row.ecr;
+                    this.moving_player.image = old_row.image;
+                    this.moving_player = undefined;
+                    console.log(this.moving_player, row);
+                }
+
                 this.$_vue_inst.update();  // $_vue_inst refers to the Vue.component instance, not the data class.
             },
         },
@@ -178,7 +197,7 @@ export default class MyTeamComponent extends Component {
     ]
 
     async vue_on_create(self) {
-        this.bench_players = this.overall_data.map(x => { x.position = 'B'; return x })
+        this.bench_players = this.overall_data.map(x => { x = {...x, position: 'B'}; return x })
         console.log('my team compt', this);
 
         setTimeout(() => {
