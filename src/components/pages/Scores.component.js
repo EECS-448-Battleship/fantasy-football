@@ -5,7 +5,7 @@ const template = `
 <div class="page-scores">
     <div class="header">
         <div class="left">
-            <h2>Matchups - <small>Week {{ current_week }}</small></h2>
+            <h2>Matchups & Scores - <small>Week {{ current_week }}</small></h2>
         </div>
         <div class="right">
             <button :class="{ 'disable-click': current_week === max_week }" @click="to_next_week()">Next Week</button><button :class="{ 'disable-click': current_week === min_week }" @click="to_previous_week()">Previous Week</button>
@@ -42,6 +42,18 @@ export default class ScoresComponent extends Component {
                 "team_2": "Team 19",
                 "team_2_logo": "https://via.placeholder.com/150x100",
                 "team_2_projection": 37
+            },
+            {
+                "date": "10/23/2020",
+                "team_1": "Team 16",
+                "team_1_logo": "https://via.placeholder.com/150x100",
+                "team_1_projection": 36,
+                "team_2": "Team 35",
+                "team_2_logo": "https://via.placeholder.com/150x100",
+                "team_2_projection": 71,
+                "winner": "Team 35",
+                "winner_score": "84",
+                "loser_score": "41",
             },
             {
                 "date": "10/31/2020",
@@ -179,15 +191,6 @@ export default class ScoresComponent extends Component {
                 "team_2_projection": 12
             },
             {
-                "date": "10/25/2020",
-                "team_1": "Team 16",
-                "team_1_logo": "https://via.placeholder.com/150x100",
-                "team_1_projection": 36,
-                "team_2": "Team 35",
-                "team_2_logo": "https://via.placeholder.com/150x100",
-                "team_2_projection": 71
-            },
-            {
                 "date": "11/7/2020",
                 "team_1": "Team 17",
                 "team_1_logo": "https://via.placeholder.com/150x100",
@@ -236,6 +239,21 @@ export default class ScoresComponent extends Component {
                 </div>
             `
         },
+        {
+            header: 'Outcome',
+            type: GridCellRenderType.HTML,
+            key: 'winner',
+            renderer: (_, data) => {
+                if ( data?.winner ) {
+                    return `
+                        <div><b>Winner:</b> ${data.winner}</div>
+                        <div><b>Score: </b> ${data.winner_score} / ${data.loser_score}</div>
+                    `
+                } else {
+                    return `N/A`
+                }
+            },
+        }
     ]
 
     data = []
