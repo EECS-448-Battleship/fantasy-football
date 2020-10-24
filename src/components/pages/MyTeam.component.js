@@ -8,12 +8,28 @@ const template = `
             <h2>My Team - </h2><input placeholder="Click to edit team name..." type="text" v-model="team_name">
         </div>
     </div>
-    <div class="body" style="display: flex; flex-direction: row; margin-left: 10px;">
+    <div class="body" style="display: flex; flex-direction: row; margin-left: 10px; padding-bottom: 50px;" v-if="show_body">
         <app-grid
             :column_defs="overall_column_defs"
             :data="overall_data"
             :show_row_numbers="true"
+            style="flex: 1;"
         ></app-grid>
+        <div class="lineup-grids" style="margin-left: 30px; flex: 1;">
+            <h3>Starting Lineup</h3>
+            <app-grid
+                :column_defs="lineup_column_defs"
+                :data="starting_players"
+                :show_row_numbers="false"
+            ></app-grid>
+
+            <h3>Bench</h3>
+            <app-grid
+                :column_defs="lineup_column_defs"
+                :data="bench_players"
+                :show_row_numbers="false"
+            ></app-grid>
+        </div>
     </div>
 </div>
 `
@@ -23,6 +39,74 @@ export default class MyTeamComponent extends Component {
     static get props() { return [] }
 
     team_name = ''
+    show_body = true
+
+    moving_player = undefined
+
+    starting_players = [
+        {
+            position: 'QB',
+        },
+        {
+            position: 'RB',
+        },
+        {
+            position: 'RB',
+        },
+        {
+            position: 'WR',
+        },
+        {
+            position: 'WR',
+        },
+        {
+            position: 'TE',
+        },
+        {
+            position: 'FLX',
+        },
+        {
+            position: 'DST',
+        },
+    ]
+    bench_players = []
+
+    lineup_column_defs = [
+        {
+            header: 'POS',
+            key: 'position',
+        },
+        {
+            header: 'Player',
+            key: 'player_name',
+            type: GridCellRenderType.HTML,
+            renderer: (_, data) => {
+                if ( !data.player_name ) {
+                    return `<i style="color: darkgrey">none</i>`
+                } else {
+                    return data.player_name
+                }
+            },
+        },
+        {
+            header: '',
+            key: 'player_name',
+            type: GridCellRenderType.Component,
+            component: Vue.component('app-action-button'),
+            button_color: '#0582CA',
+            button_text: (row, col) => {
+                return this.moving_player ? 'Here' : 'Move'
+            },
+            button_hidden: (row, col) => {
+                if ( !row.player_name ) return true;
+                return this.moving_player && this.moving_player.player_name === row.player_name;
+            },
+            on_click: (row, col) => {
+                this.moving_player = row;
+                this.$_vue_inst.update();  // $_vue_inst refers to the Vue.component instance, not the data class.
+            },
+        },
+    ]
 
     overall_column_defs = [
         {
@@ -92,7 +176,20 @@ export default class MyTeamComponent extends Component {
         },
     ]
 
-    async vue_on_create() {
+    async vue_on_create(self) {
+        this.bench_players = this.overall_data.map(x => { x.position = 'B'; return x })
+        console.log('my team compt', this);
 
+        setTimeout(() => {
+            this.update();
+        }, 500);
+    }
+
+    update() {
+        this.show_body = false;
+
+        this.$nextTick(() => {
+            this.show_body = true;
+        });
     }
 }
