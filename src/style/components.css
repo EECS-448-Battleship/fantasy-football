@@ -197,3 +197,17 @@ div.center span {
     background: #ff1a1a;
     cursor: pointer;
 }
+
+/************ MY TEAM PAGE **************/
+.page-my-team .header .team-name {
+    display: flex;
+    flex-direction: row;
+}
+
+.page-my-team .header .team-name input {
+    margin-left: 5px;
+    border: none;
+    font-size: 15pt;
+    font-family: 'Roboto Condensed', sans-serif;
+    flex: 1;
+}

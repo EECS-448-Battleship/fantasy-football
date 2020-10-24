@@ -4,8 +4,8 @@ import {GridCellRenderType} from '../Grid.component.js'
 const template = `
 <div class="page-my-team">
     <div class="header">
-        <div class="left">
-            <h2>My Team</h2>
+        <div class="left team-name">
+            <h2>My Team - </h2><input placeholder="Click to edit team name..." type="text" v-model="team_name">
         </div>
     </div>
     <div class="body" style="display: flex; flex-direction: row; margin-left: 10px;">
@@ -21,6 +21,8 @@ export default class MyTeamComponent extends Component {
     static get selector() { return 'page-my-team' }
     static get template() { return template }
     static get props() { return [] }
+
+    team_name = ''
 
     overall_column_defs = [
         {
