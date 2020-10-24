@@ -15,7 +15,7 @@ const template = `
             :show_row_numbers="true"
             style="flex: 1;"
         ></app-grid>
-        <div class="lineup-grids" style="margin-left: 30px; flex: 1;">
+        <div class="lineup-grids" style="margin-left: 30px; margin-right: 10px; flex: 1;">
             <h3>Starting Lineup</h3>
             <app-grid
                 :column_defs="lineup_column_defs"
@@ -93,11 +93,12 @@ export default class MyTeamComponent extends Component {
             key: 'player_name',
             type: GridCellRenderType.Component,
             component: Vue.component('app-action-button'),
-            button_color: '#0582CA',
+            button_color: (row, col) => this.moving_player ? '#CC5746' : '#0582CA',
             button_text: (row, col) => {
                 return this.moving_player ? 'Here' : 'Move'
             },
             button_hidden: (row, col) => {
+                if ( this.moving_player && this.moving_player.player_name !== row.player_name ) return false;
                 if ( !row.player_name ) return true;
                 return this.moving_player && this.moving_player.player_name === row.player_name;
             },
