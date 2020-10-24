@@ -13,7 +13,7 @@ const template = `
     <table>
         <tr>
             <th v-if="show_row_numbers">#</th>
-            <th v-for="col of column_defs">{{ col.header || '' }}</th>
+            <th v-for="col of column_defs" :title="col.title || ''">{{ col.header || '' }}</th>
         </tr>
         <tr v-for="(row, idx) of data">
             <td v-if="show_row_numbers">{{ idx + 1 }}</td>
@@ -21,7 +21,7 @@ const template = `
                 <div v-if="!col.type || col.type === GridCellRenderType.Simple">{{ row[col.key] }}</div>
                 <div v-if="col.type === GridCellRenderType.HTML" v-html="col.renderer(row[col.key], row)"></div>
                 <div v-if="col.type === GridCellRenderType.Component">
-                    <component :is="col.component" :row="row" :col="col" :idx="idx" @click="col.on_click"></component>
+                    <component :is="col.component" :row="row" :col="col" :idx="idx" @click="on_col_click(col, $event)"></component>
                 </div>
             </td>
         </tr>
@@ -43,5 +43,9 @@ export default class GridComponent extends Component {
 
     async vue_on_create() {
 
+    }
+
+    on_col_click(col, [row, passcol]) {
+        col.on_click(row, passcol)
     }
 }
