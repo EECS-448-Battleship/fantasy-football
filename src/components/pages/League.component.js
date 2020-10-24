@@ -24,9 +24,17 @@ export default class LeagueComponent extends Component {
             key: 'standing',
             renderer: (value, row) => {
                 return `
+                    <h1 id="ranking">
                     Rank: ${row.standing.rank}
-                    <br>W/L: ${row.standing.win_loss}
+                    </h1>
+                    <h2 id="record">
+                        W/L: ${row.standing.win_loss}
+                    </h2>
+
+                    
+                    
                 `
+                
             }
         },
         {
@@ -68,11 +76,8 @@ export default class LeagueComponent extends Component {
             team_name: 'Team A',
             team_image: 'https://via.placeholder.com/150x100',
             stats: [
-                { name: 'Stat 1', value: 1 },
-                { name: 'Stat 2', value: 2 },
-                { name: 'Stat 3', value: 3 },
-                { name: 'Stat 4', value: 4 },
-                { name: 'Stat 5', value: 5 },
+                { name: 'Points Scored', value: 1 },
+                { name: 'Points Against', value: 2 },
             ],
         },
         {
@@ -83,11 +88,8 @@ export default class LeagueComponent extends Component {
             team_name: 'Team B',
             team_image: 'https://via.placeholder.com/150x100',
             stats: [
-                { name: 'Stat 1', value: 1 },
-                { name: 'Stat 2', value: 2 },
-                { name: 'Stat 3', value: 3 },
-                { name: 'Stat 4', value: 4 },
-                { name: 'Stat 5', value: 5 },
+                { name: 'Points Scored', value: 1 },
+                { name: 'Points Against', value: 2 },
             ],
         },
         {
@@ -98,11 +100,9 @@ export default class LeagueComponent extends Component {
             team_name: 'Team C',
             team_image: 'https://via.placeholder.com/150x100',
             stats: [
-                { name: 'Stat 1', value: 1 },
-                { name: 'Stat 2', value: 2 },
-                { name: 'Stat 3', value: 3 },
-                { name: 'Stat 4', value: 4 },
-                { name: 'Stat 5', value: 5 },
+                { name: 'Points Scored', value: 1 },
+                { name: 'Points Against', value: 2 },
+
             ],
         },
         {
@@ -113,11 +113,9 @@ export default class LeagueComponent extends Component {
             team_name: 'Team D',
             team_image: 'https://via.placeholder.com/150x100',
             stats: [
-                { name: 'Stat 1', value: 1 },
-                { name: 'Stat 2', value: 2 },
-                { name: 'Stat 3', value: 3 },
-                { name: 'Stat 4', value: 4 },
-                { name: 'Stat 5', value: 5 },
+                { name: 'Points Scored', value: 1 },
+                { name: 'Points Against', value: 2 },
+
             ],
         },
         {
@@ -128,11 +126,22 @@ export default class LeagueComponent extends Component {
             team_name: 'Team E',
             team_image: 'https://via.placeholder.com/150x100',
             stats: [
-                { name: 'Stat 1', value: 1 },
-                { name: 'Stat 2', value: 2 },
-                { name: 'Stat 3', value: 3 },
-                { name: 'Stat 4', value: 4 },
-                { name: 'Stat 5', value: 5 },
+                { name: 'Points Scored', value: 1 },
+                { name: 'Points Against', value: 2 },
+
+            ],
+        },
+        {
+            standing: {
+                rank: 6,
+                win_loss: '0/3',
+            },
+            team_name: 'Team F',
+            team_image: 'https://via.placeholder.com/150x100',
+            stats: [
+                { name: 'Points Scored', value: 1 },
+                { name: 'Points Against', value: 2 },
+
             ],
         },
     ]

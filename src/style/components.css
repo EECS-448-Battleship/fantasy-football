@@ -92,3 +92,11 @@ div.center span {
     vertical-align: middle;
     display: table-cell;
 }
+
+#ranking{
+    text-align: center;
+}
+
+#record{
+    text-align: center;
+}
