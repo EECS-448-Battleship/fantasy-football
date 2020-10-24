@@ -13,22 +13,22 @@ const template = `
             <input type="text" placeholder="Quick filter..." v-model="quick_filter" @keyup="on_filter_change()">
         </div>
     </div>
-    <div class="item-grid" @mouseover="on_photo_hover(player)"
+    <div class="item-grid">
+        <div class="item" v-for="player of filtered_players" @mouseover="on_photo_hover(player)"
         @mouseleave="on_photo_leave(player)">
-        <div class="item" v-for="player of filtered_players" >         
-            <div v-if="player.showing_stats">
-                <p>"Hey"</p>                 
-            </div>
-            <div v-else>
-                    <div class="item-icon">
+            <div style="display: flex; flex-direction: column; height: 100%;">
+                    <div class="item-icon" v-if="!player.showing_stats">
                         <img :src="player.image" :alt="player.name">
                     </div>   
-                    <div class="item-contents">
+                    <div class="item-contents" v-if="!player.showing_stats">
                         <h1>{{ player.name }}</h1>
-                        <p>#{{ player.number }} ({{ player.position }})</p>                   
+                        <p>#{{ player.number }} ({{ player.position }})</p>
                         <div class="moreStats">
                             <p>{{ player.stats }}</p>
                         </div>
+                    </div>
+                    <div class="item-contents" style="flex: 1;" v-else>
+                        Hi! Show stats here.
                     </div>
                     <div class="item-button">
                         <button
@@ -513,6 +513,7 @@ export default class AddPlayersComponent extends Component {
 
     remove_from_team(player) {
         this.my_team = this.my_team.filter(x => x !== player)
+        player.showing_stats = false
         if (this.my_team_only) this.to_my_team_only()
     }
 
