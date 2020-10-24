@@ -13,7 +13,7 @@ const template = `
     <table>
         <tr>
             <th v-if="show_row_numbers">#</th>
-            <th v-for="col of column_defs">{{ col.header || '' }}</th>
+            <th v-for="col of column_defs" :title="col.title || ''">{{ col.header || '' }}</th>
         </tr>
         <tr v-for="(row, idx) of data">
             <td v-if="show_row_numbers">{{ idx + 1 }}</td>
