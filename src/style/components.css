@@ -101,13 +101,6 @@ div.center span {
 }
 
 <<<<<<< HEAD
-#ranking{
-    text-align: center;
-}
-
-#record{
-    text-align: center;
-}
 =======
 .header {
     padding-left: 15px;
@@ -221,3 +214,19 @@ div.center span {
     flex: 1;
 }
 >>>>>>> db71e5125ae5257a7d679f849b37b3ab95066853
+
+/************ League PAGE **************/
+.page-league .header {
+    border: none;
+    background-color: red;
+    font-size: 15px;
+    text-align: center;
+}
+
+#ranking{
+    text-align: center;
+}
+
+#record{
+    text-align: center;
+}
