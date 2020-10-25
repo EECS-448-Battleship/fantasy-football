@@ -1,26 +1,54 @@
-import {Component} from '../../../lib/vues6.js'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/pages/Scores.component.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/pages/Scores.component.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import {Component} from '../../../lib/vues6.js'
 import {GridCellRenderType} from '../Grid.component.js'
 
 const template = `
-<div class="page-scores">
-    <div class="header">
-        <div class="left">
-            <h2>Matchups & Scores - <small>Week {{ current_week }}</small></h2>
-        </div>
-        <div class="right">
-            <button :class="{ 'disable-click': current_week === max_week }" @click="to_next_week()">Next Week</button><button :class="{ 'disable-click': current_week === min_week }" @click="to_previous_week()">Previous Week</button>
-        </div>
-    </div>
-    <app-grid
+&lt;div class="page-scores">
+    &lt;div class="header">
+        &lt;div class="left">
+            &lt;h2>Matchups &amp; Scores - &lt;small>Week {{ current_week }}&lt;/small>&lt;/h2>
+        &lt;/div>
+        &lt;div class="right">
+            &lt;button :class="{ 'disable-click': current_week === max_week }" @click="to_next_week()">Next Week&lt;/button>&lt;button :class="{ 'disable-click': current_week === min_week }" @click="to_previous_week()">Previous Week&lt;/button>
+        &lt;/div>
+    &lt;/div>
+    &lt;app-grid
         :column_defs="column_defs"
         :data="data"
         :show_row_numbers="false"
-    ></app-grid>
-</div>
+    >&lt;/app-grid>
+&lt;/div>
 `
 
 /**
- * Component representing the scores & match-ups page.
+ * Component representing the scores &amp; match-ups page.
  * @extends Component
  */
 class ScoresComponent extends Component {
@@ -47,7 +75,7 @@ class ScoresComponent extends Component {
     min_week = 1
 
     /**
-     * Array of arrays of data for each week with first item being week 1, second being week 2, &c.
+     * Array of arrays of data for each week with first item being week 1, second being week 2, &amp;c.
      * @type {object[][]}
      */
     week_x_data = [
@@ -269,13 +297,13 @@ class ScoresComponent extends Component {
             type: GridCellRenderType.HTML,
             key: 'team_1',
             renderer: (_, data) => `
-                <div style="display: flex; flex-direction: row;">
-                    <img src="${data.team_1_logo}" alt="${data.team_1}">
-                    <div style="margin-left: 20px">
-                        <b>${data.team_1}</b>
-                        <p>Projection: ${data.team_1_projection}</p>
-                    </div>
-                </div>
+                &lt;div style="display: flex; flex-direction: row;">
+                    &lt;img src="${data.team_1_logo}" alt="${data.team_1}">
+                    &lt;div style="margin-left: 20px">
+                        &lt;b>${data.team_1}&lt;/b>
+                        &lt;p>Projection: ${data.team_1_projection}&lt;/p>
+                    &lt;/div>
+                &lt;/div>
             `
         },
         {
@@ -283,13 +311,13 @@ class ScoresComponent extends Component {
             type: GridCellRenderType.HTML,
             key: 'team_2',
             renderer: (_, data) => `
-                <div style="display: flex; flex-direction: row;">
-                    <img src="${data.team_2_logo}" alt="${data.team_2}">
-                    <div style="margin-left: 20px">
-                        <b>${data.team_2}</b>
-                        <p>Projection: ${data.team_2_projection}</p>
-                    </div>
-                </div>
+                &lt;div style="display: flex; flex-direction: row;">
+                    &lt;img src="${data.team_2_logo}" alt="${data.team_2}">
+                    &lt;div style="margin-left: 20px">
+                        &lt;b>${data.team_2}&lt;/b>
+                        &lt;p>Projection: ${data.team_2_projection}&lt;/p>
+                    &lt;/div>
+                &lt;/div>
             `
         },
         {
@@ -299,8 +327,8 @@ class ScoresComponent extends Component {
             renderer: (_, data) => {
                 if ( data?.winner ) {
                     return `
-                        <div><b>Winner:</b> ${data.winner}</div>
-                        <div><b>Score: </b> ${data.winner_score} / ${data.loser_score}</div>
+                        &lt;div>&lt;b>Winner:&lt;/b> ${data.winner}&lt;/div>
+                        &lt;div>&lt;b>Score: &lt;/b> ${data.winner_score} / ${data.loser_score}&lt;/div>
                     `
                 } else {
                     return `N/A`
@@ -317,7 +345,7 @@ class ScoresComponent extends Component {
 
     /**
      * Called when the component is instantiated. Initializes the current week to the most recent week.
-     * @return {Promise<void>}
+     * @return {Promise&lt;void>}
      */
     async vue_on_create() {
         this.data = this.week_x_data[this.max_week - 1];
@@ -327,7 +355,7 @@ class ScoresComponent extends Component {
      * When called, advances the data to the next-most recent week, if one exists.
      */
     to_next_week() {
-        if ( this.current_week < this.max_week ) {
+        if ( this.current_week &lt; this.max_week ) {
             this.current_week += 1;
             this.data = this.week_x_data[this.current_week - 1];
         }
@@ -345,3 +373,26 @@ class ScoresComponent extends Component {
 }
 
 export default ScoresComponent
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-routing.html">routing</a></li><li><a href="module-util.html">util</a></li></ul><h3>Classes</h3><ul><li><a href="AddPlayersComponent.html">AddPlayersComponent</a></li><li><a href="DraftBoardComponent.html">DraftBoardComponent</a></li><li><a href="GridActionButtonComponent.html">GridActionButtonComponent</a></li><li><a href="GridComponent.html">GridComponent</a></li><li><a href="LeagueComponent.html">LeagueComponent</a></li><li><a href="LinkComponent.html">LinkComponent</a></li><li><a href="module-routing-Router.html">Router</a></li><li><a href="MyTeamComponent.html">MyTeamComponent</a></li><li><a href="ScoresComponent.html">ScoresComponent</a></li><li><a href="TopLevelComponent.html">TopLevelComponent</a></li></ul><h3>Global</h3><ul><li><a href="global.html#GridCellRenderType">GridCellRenderType</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.5</a> on Sun Oct 25 2020 12:32:18 GMT-0500 (Central Daylight Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

@@ -1,52 +1,80 @@
-import { Component } from '../../../lib/vues6.js'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/pages/AddPlayers.component.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/pages/AddPlayers.component.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { Component } from '../../../lib/vues6.js'
 
 const template = `
-<div class="page-add-players">
-    <div class="header">
-        <div class="left">
-            <h2>Add Players to Team</h2>
-        </div>
-        <div class="right">
-            <button :class="{ 'disable-click': my_team_only }" @click="to_my_team_only()">My Team</button><button :class="{ 'disable-click': !my_team_only }" @click="to_all_players()">All Players</button>
-        </div>
-        <div class="right">
-            <input type="text" placeholder="Quick filter..." v-model="quick_filter" @keyup="on_filter_change()">
-        </div>
-    </div>
-    <div class="item-grid">
-        <div class="item" v-for="player of filtered_players" @mouseover="on_photo_hover(player)"
+&lt;div class="page-add-players">
+    &lt;div class="header">
+        &lt;div class="left">
+            &lt;h2>Add Players to Team&lt;/h2>
+        &lt;/div>
+        &lt;div class="right">
+            &lt;button :class="{ 'disable-click': my_team_only }" @click="to_my_team_only()">My Team&lt;/button>&lt;button :class="{ 'disable-click': !my_team_only }" @click="to_all_players()">All Players&lt;/button>
+        &lt;/div>
+        &lt;div class="right">
+            &lt;input type="text" placeholder="Quick filter..." v-model="quick_filter" @keyup="on_filter_change()">
+        &lt;/div>
+    &lt;/div>
+    &lt;div class="item-grid">
+        &lt;div class="item" v-for="player of filtered_players" @mouseover="on_photo_hover(player)"
         @mouseleave="on_photo_leave(player)">
-            <div style="display: flex; flex-direction: column; height: 100%;">
-                    <div class="item-icon" v-if="!player.showing_stats">
-                        <img :src="player.image" :alt="player.name">
-                    </div>   
-                    <div class="item-contents" v-if="!player.showing_stats">
-                        <h1>{{ player.name }}</h1>
-                        <p>#{{ player.number }} ({{ player.position }})</p>
-                        <div class="moreStats">
-                            <p>{{ player.stats }}</p>
-                        </div>
-                    </div>
-                    <div class="item-contents" style="flex: 1;" v-else>
+            &lt;div style="display: flex; flex-direction: column; height: 100%;">
+                    &lt;div class="item-icon" v-if="!player.showing_stats">
+                        &lt;img :src="player.image" :alt="player.name">
+                    &lt;/div>   
+                    &lt;div class="item-contents" v-if="!player.showing_stats">
+                        &lt;h1>{{ player.name }}&lt;/h1>
+                        &lt;p>#{{ player.number }} ({{ player.position }})&lt;/p>
+                        &lt;div class="moreStats">
+                            &lt;p>{{ player.stats }}&lt;/p>
+                        &lt;/div>
+                    &lt;/div>
+                    &lt;div class="item-contents" style="flex: 1;" v-else>
                         Hi! Show stats here.
-                    </div>
-                    <div class="item-button">
-                        <button
-                            v-if="my_team.length < 15 && !my_team.includes(player)"
+                    &lt;/div>
+                    &lt;div class="item-button">
+                        &lt;button
+                            v-if="my_team.length &lt; 15 &amp;&amp; !my_team.includes(player)"
                             @click="add_to_team(player)"
                             class="add"
-                        >Add to Team</button>
-                        <button
+                        >Add to Team&lt;/button>
+                        &lt;button
                             v-if="my_team.includes(player)"
                             @click="remove_from_team(player)"
                             class="remove"
-                        >Remove from Team</button>
-                    </div>
-            </div>           
+                        >Remove from Team&lt;/button>
+                    &lt;/div>
+            &lt;/div>           
 
-        </div>
-    </div>
-</div>
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
 `
 
 /**
@@ -514,7 +542,7 @@ class AddPlayersComponent extends Component {
 
     /**
      * Called when the page is instantiated.
-     * @return {Promise<void>}
+     * @return {Promise&lt;void>}
      */
     async vue_on_create() {
         this.possible_players = [...this.all_players];
@@ -588,3 +616,26 @@ class AddPlayersComponent extends Component {
 }
 
 export default AddPlayersComponent
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-routing.html">routing</a></li><li><a href="module-util.html">util</a></li></ul><h3>Classes</h3><ul><li><a href="AddPlayersComponent.html">AddPlayersComponent</a></li><li><a href="DraftBoardComponent.html">DraftBoardComponent</a></li><li><a href="GridActionButtonComponent.html">GridActionButtonComponent</a></li><li><a href="GridComponent.html">GridComponent</a></li><li><a href="LeagueComponent.html">LeagueComponent</a></li><li><a href="LinkComponent.html">LinkComponent</a></li><li><a href="module-routing-Router.html">Router</a></li><li><a href="MyTeamComponent.html">MyTeamComponent</a></li><li><a href="ScoresComponent.html">ScoresComponent</a></li><li><a href="TopLevelComponent.html">TopLevelComponent</a></li></ul><h3>Global</h3><ul><li><a href="global.html#GridCellRenderType">GridCellRenderType</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.5</a> on Sun Oct 25 2020 12:32:18 GMT-0500 (Central Daylight Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
