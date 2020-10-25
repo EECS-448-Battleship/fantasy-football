@@ -241,3 +241,16 @@ div.center span {
 .page-league .stats .stat .title {
     font-weight: bold;
 }
+
+/************ Draft Board PAGE **************/
+.page-draft-board .stats {
+    display: flex;
+    flex-direction: row;
+}
+
+.page-draft-board .stats .stat {
+    margin-right: 10px;
+}
+
+.page-draft-board .stats .stat .title {
+    font-weight: bold;

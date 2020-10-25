@@ -50,16 +50,8 @@ class DraftBoardComponent extends Component {
             key: 'position',
         },
         {
-            header: 'Speed',
-            key: 'speed',
-        },
-        {
             header: 'Points',
             key: 'points',
-        },
-        {
-            header: 'Price',
-            key: 'price',
         },
         {
             header: 'Stats',
