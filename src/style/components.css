@@ -221,17 +221,23 @@ div.center span {
 }
 
 /************ League PAGE **************/
-.page-league .header {
-    border: none;
-    background-color: red;
-    font-size: 15px;
-    text-align: center;
-}
-
 #ranking{
     text-align: center;
 }
 
 #record{
     text-align: center;
+}
+
+.page-league .stats {
+    display: flex;
+    flex-direction: row;
+}
+
+.page-league .stats .stat {
+    margin-right: 10px;
+}
+
+.page-league .stats .stat .title {
+    font-weight: bold;
 }

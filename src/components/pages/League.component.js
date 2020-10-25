@@ -4,7 +4,9 @@ import {GridCellRenderType} from '../Grid.component.js'
 const template = `
 <div class="page-league">
   <div class="header">
-    League Standings
+    <div class="left">
+      <h2>League Standings</h2>
+    </div>
   </div>
     <app-grid
         :column_defs="column_defs"
@@ -53,7 +55,7 @@ class LeagueComponent extends Component {
             renderer: (value, row) => {
                 return `
                     <div class="center">
-                        <img src="${row.team_image}" alt="${row.team_image}">
+                        <img src="${row.team_image}" alt="${row.team_image}" width="100">
                         <span>${row.team_name}</span>
                     </div>
                 `
@@ -62,18 +64,25 @@ class LeagueComponent extends Component {
         {
             header: 'Stats',
             key: 'stats',
-        },
-        {
-            header: '',
-            key: 'team_name',
-            type: GridCellRenderType.Component,
-            component: Vue.component('app-action-button'),
-            button_color: '#CC5746',
-            button_text: 'Test Action',
-            on_click: (row, col) => {
-                console.log('button clicked!')
+            type: GridCellRenderType.HTML,
+            renderer: (value, row) => {
+                const stats = []
+                for ( const stat of value ) {
+                    stats.push(`
+                        <div class="stat">
+                            <div class="title">${stat.name}</div>
+                            <div>${stat.value}</div>
+                        </div>
+                    `)
+                }
+
+                return `
+                    <div class="stats">
+                        ${stats.join('\n')}
+                    </div>
+                `
             },
-        }
+        },
     ]
 
     /**
