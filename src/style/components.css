@@ -101,7 +101,18 @@ div.center span {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+#ranking{
+    text-align: center;
+}
+
+#record{
+    text-align: center;
+}
+
+>>>>>>> 8f51b6dc19b242f8552ba26d37e62cb207fcf02a
 .header {
     padding-left: 15px;
     display: flex;
@@ -213,6 +224,7 @@ div.center span {
     font-family: 'Roboto Condensed', sans-serif;
     flex: 1;
 }
+<<<<<<< HEAD
 >>>>>>> db71e5125ae5257a7d679f849b37b3ab95066853
 
 /************ League PAGE **************/
@@ -230,3 +242,5 @@ div.center span {
 #record{
     text-align: center;
 }
+=======
+>>>>>>> 8f51b6dc19b242f8552ba26d37e62cb207fcf02a

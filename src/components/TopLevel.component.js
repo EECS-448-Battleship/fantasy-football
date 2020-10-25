@@ -61,7 +61,7 @@ class TopLevelComponent extends Component {
         this.router_subscription = router.subscribe((path, args) => this.on_route_change(path, args))
 
         if ( !this.current_route ) {
-            // router.navigate('my-team')
+            router.navigate('my-team')
         }
 
         const url_params = new URLSearchParams(window.location.search)
