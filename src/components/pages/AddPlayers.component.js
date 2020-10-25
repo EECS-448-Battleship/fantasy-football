@@ -16,8 +16,9 @@ const template = `
         </div>
     </div>
     <div class="item-grid">
-        <div class="item" v-for="player of filtered_players" @mouseover="on_photo_hover(player)"
-        @mouseleave="on_photo_leave(player)">
+        <div class="item" v-for="player of filtered_players">
+            <div  @mouseover="on_photo_hover(player)"
+            @mouseleave="on_photo_leave(player)">
             <div style="display: flex; flex-direction: column; height: 100%;">
                     <div class="item-icon" v-if="!player.showing_stats">
                         <img :src="player.image" :alt="player.name">
@@ -58,8 +59,8 @@ const template = `
                             <h2> Specific Stats for ST Here </h2>
                         </div>                                     
                     </div>
-                    </div>
-                    </div>
+                </div>
+            </div>                    
                     <div class="item-button">
                         <button
                             v-if="my_team.length < 15 && !my_team.includes(player)"
@@ -72,6 +73,7 @@ const template = `
                             class="remove"
                         >Remove from Team</button>
                     </div>
+            </div>
             </div>           
 
         </div>
