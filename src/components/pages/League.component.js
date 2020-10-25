@@ -13,14 +13,22 @@ const template = `
     ></app-grid>
 </div>
 `
-export default class LeagueComponent extends Component {
+
+/**
+ * Component representing the league standings page.
+ * @extends Component
+ */
+class LeagueComponent extends Component {
     static get selector() { return 'page-league' }
     static get template() { return template }
     static get props() { return [] }
 
     GridCellRenderType = GridCellRenderType
 
-
+    /**
+     * Column definitions for the league standings grid.
+     * @type {*[]}
+     */
     column_defs = [
         {
             header: 'Standing',
@@ -68,6 +76,10 @@ export default class LeagueComponent extends Component {
         }
     ]
 
+    /**
+     * Sample data for the league standings grid.
+     * @type {*[]}
+     */
     data = [
         {
             standing: {
@@ -147,7 +159,13 @@ export default class LeagueComponent extends Component {
         },
     ]
 
+    /**
+     * Called when the component is instantiated.
+     * @return {Promise<void>}
+     */
     async vue_on_create() {
 
     }
 }
+
+export default LeagueComponent

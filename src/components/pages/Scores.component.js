@@ -18,15 +18,38 @@ const template = `
     ></app-grid>
 </div>
 `
-export default class ScoresComponent extends Component {
+
+/**
+ * Component representing the scores & match-ups page.
+ * @extends Component
+ */
+class ScoresComponent extends Component {
     static get selector() { return 'page-scores' }
     static get template() { return template }
     static get props() { return [] }
 
+    /**
+     * The number of the current week shown in the interface
+     * @type {number}
+     */
     current_week = 6
+
+    /**
+     * Most recent week number.
+     * @type {number}
+     */
     max_week = 6
+
+    /**
+     * Least recent week number.
+     * @type {number}
+     */
     min_week = 1
 
+    /**
+     * Array of arrays of data for each week with first item being week 1, second being week 2, &c.
+     * @type {*[][]}
+     */
     week_x_data = [
         // Week 1 Data
         [
@@ -228,6 +251,10 @@ export default class ScoresComponent extends Component {
         ]
     ]
 
+    /**
+     * Column definitions for the matchups grid.
+     * @type {*[]}
+     */
     column_defs = [
         {
             header: 'Date',
@@ -282,12 +309,23 @@ export default class ScoresComponent extends Component {
         }
     ]
 
+    /**
+     * The currently shown week's data.
+     * @type {*[]}
+     */
     data = []
 
+    /**
+     * Called when the component is instantiated. Initializes the current week to the most recent week.
+     * @return {Promise<void>}
+     */
     async vue_on_create() {
         this.data = this.week_x_data[this.max_week - 1];
     }
 
+    /**
+     * When called, advances the data to the next-most recent week, if one exists.
+     */
     to_next_week() {
         if ( this.current_week < this.max_week ) {
             this.current_week += 1;
@@ -295,6 +333,9 @@ export default class ScoresComponent extends Component {
         }
     }
 
+    /**
+     * When called, advances the data to the next-least recent week, if one exists.
+     */
     to_previous_week() {
         if ( this.current_week > this.min_week ) {
             this.current_week -= 1;
@@ -302,3 +343,5 @@ export default class ScoresComponent extends Component {
         }
     }
 }
+
+export default ScoresComponent

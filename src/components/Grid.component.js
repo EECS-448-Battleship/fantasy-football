@@ -1,5 +1,9 @@
 import {Component} from '../../lib/vues6.js'
 
+/**
+ * An enum representing the different grid cell renderer types for the shared grid.
+ * @type {object}
+ */
 const GridCellRenderType = {
     Simple: Symbol('simple'),
     HTML: Symbol('html'),
@@ -28,7 +32,12 @@ const template = `
     </table>
 </div>
 `
-export default class GridComponent extends Component {
+
+/**
+ * Shared grid component used to show tables in various interfaces.
+ * @extends Component
+ */
+class GridComponent extends Component {
     static get selector() { return 'app-grid' }
     static get template() { return template }
     static get props() {
@@ -41,11 +50,23 @@ export default class GridComponent extends Component {
 
     GridCellRenderType = GridCellRenderType
 
+    /**
+     * Called when the component is instantiated.
+     * @return {Promise<void>}
+     */
     async vue_on_create() {
 
     }
 
+    /**
+     * Called when the component renderer emits a click event, to pass it along to the column definition.
+     * @param {object} col - the column definition
+     * @param {object} row - the row clicked
+     * @param {object} passcol - the column emitted from the component
+     */
     on_col_click(col, [row, passcol]) {
         col.on_click(row, passcol)
     }
 }
+
+export default GridComponent

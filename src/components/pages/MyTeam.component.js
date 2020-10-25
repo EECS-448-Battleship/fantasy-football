@@ -33,16 +33,40 @@ const template = `
     </div>
 </div>
 `
-export default class MyTeamComponent extends Component {
+
+/**
+ * Component representing the my-team page.
+ * @extends Component
+ */
+class MyTeamComponent extends Component {
     static get selector() { return 'page-my-team' }
     static get template() { return template }
     static get props() { return [] }
 
+    /**
+     * The team name.
+     * @type {string}
+     */
     team_name = ''
+
+    /**
+     * If true, the body of the page will be shown. Otherwise, hidden.
+     * This is used to refresh the entire component at once.
+     * @type {boolean}
+     */
     show_body = true
 
+    /**
+     * The player currently being moved. If none, then will be set to undefined.
+     * @type {undefined}
+     */
     moving_player = undefined
 
+    /**
+     * Array of players filling starting line up positions. If no player is in
+     * a position, then only the "postition" key will be set.
+     * @type {object[]}
+     */
     starting_players = [
         {
             position: 'QB',
@@ -69,8 +93,17 @@ export default class MyTeamComponent extends Component {
             position: 'DST',
         },
     ]
+
+    /**
+     * Players on the bench.
+     * @type {*[]}
+     */
     bench_players = []
 
+    /**
+     * Column definitions for the starting/bench lineup grids.
+     * @type {*[]}
+     */
     lineup_column_defs = [
         {
             header: 'POS',
@@ -128,6 +161,10 @@ export default class MyTeamComponent extends Component {
         },
     ]
 
+    /**
+     * Column definitions for the overall team grid.
+     * @type {*[]}
+     */
     overall_column_defs = [
         {
             header: 'Name',
@@ -151,6 +188,10 @@ export default class MyTeamComponent extends Component {
         },
     ]
 
+    /**
+     * Data for the overall team grid (list of user's team players).
+     * @type {*[]}
+     */
     overall_data = [
         {
             player_name: 'Christian McCaffrey',
@@ -196,15 +237,21 @@ export default class MyTeamComponent extends Component {
         },
     ]
 
-    async vue_on_create(self) {
+    /**
+     * Called when the component is instantiated. Initializes the bench players data.
+     * @return {Promise<void>}
+     */
+    async vue_on_create() {
         this.bench_players = this.overall_data.map(x => { x = {...x, position: 'B'}; return x })
-        console.log('my team compt', this);
 
         setTimeout(() => {
             this.update();
         }, 500);
     }
 
+    /**
+     * Force re-render the entire component by briefly hiding it.
+     */
     update() {
         this.show_body = false;
 
@@ -213,3 +260,5 @@ export default class MyTeamComponent extends Component {
         });
     }
 }
+
+export default MyTeamComponent

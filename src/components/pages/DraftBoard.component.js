@@ -5,7 +5,12 @@ const template = `
 Draft Board
 </div>
 `
-export default class DraftBoardComponent extends Component {
+
+/**
+ * Component representing the draft board page.
+ * @extends Component
+ */
+class DraftBoardComponent extends Component {
     static get selector() { return 'page-draft-board' }
     static get template() { return template }
     static get props() { return [] }
@@ -14,3 +19,5 @@ export default class DraftBoardComponent extends Component {
 
     }
 }
+
+export default DraftBoardComponent

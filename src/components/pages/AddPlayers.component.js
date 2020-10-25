@@ -48,19 +48,51 @@ const template = `
     </div>
 </div>
 `
-export default class AddPlayersComponent extends Component {
+
+/**
+ * A component which represents the "Add Players" page. Allows users to add/remove
+ * players from their team.
+ * @extends Component
+ */
+class AddPlayersComponent extends Component {
     static get selector() { return 'page-add-players' }
     static get props() { return [] }
     static get template() { return template }
 
+    /**
+     * The current value of the quick filter for players. If empty string, no filter is applied.
+     * @type {string}
+     */
     quick_filter = ''
+
+    /**
+     * If true, then only the players on the user's team will be shown.
+     * @type {boolean}
+     */
     my_team_only = false
 
-    my_team = [];
+    /**
+     * Array of players currently on the user's team.
+     * @type {*[]}
+     */
+    my_team = []
 
-    filtered_players = [];
-    possible_players = [];
+    /**
+     * Array of currently displayed players, after the filter has been applied.
+     * @type {*[]}
+     */
+    filtered_players = []
 
+    /**
+     * Array of currently displayed players, before the filter has been applied.
+     * @type {*[]}
+     */
+    possible_players = []
+
+    /**
+     * All available players, whether they are on the user's team or not.
+     * @type {*[]}
+     */
     all_players = [
         {
             "number": 14,
@@ -480,11 +512,18 @@ export default class AddPlayersComponent extends Component {
         }
     ]
 
+    /**
+     * Called when the page is instantiated.
+     * @return {Promise<void>}
+     */
     async vue_on_create() {
         this.possible_players = [...this.all_players];
         this.filtered_players = [...this.possible_players];
     }
 
+    /**
+     * Called when the quick-filter changes. Applies the filter to the displayed players.
+     */
     on_filter_change() {
         const query = this.quick_filter.toLowerCase()
         this.filtered_players = this.possible_players.filter(x => {
@@ -493,37 +532,59 @@ export default class AddPlayersComponent extends Component {
         })
     }
 
+    /**
+     * When called, change the display to show only the user's team.
+     */
     to_my_team_only() {
         this.my_team_only = true;
         this.possible_players = [...this.my_team]
         this.on_filter_change()
     }
 
+    /**
+     * When called, change the display to show all available players.
+     */
     to_all_players() {  
         this.my_team_only = false;
         this.possible_players = [...this.all_players]
         this.on_filter_change()
     }
 
+    /**
+     * Add the given player to the user's team, if not already there.
+     * @param {object} player
+     */
     add_to_team(player) {
         if (!this.my_team.includes(player)) {
             this.my_team.push(player)
         }
     }
 
+    /**
+     * Remove the given player from the user's team, if there.
+     * @param {object} player
+     */
     remove_from_team(player) {
         this.my_team = this.my_team.filter(x => x !== player)
         player.showing_stats = false
         if (this.my_team_only) this.to_my_team_only()
     }
 
+    /**
+     * Called when the user hovers over a player. Toggles the stats to be shown.
+     * @param {object} player
+     */
     on_photo_hover(player) {
-        console.log(player.showing_stats)
         player.showing_stats = true
     }
 
+    /**
+     * Called when the user un-hovers over a player. Toggles the stats to hide.
+     * @param {object} player
+     */
     on_photo_leave(player) {
-        console.log("I am leaving")
         player.showing_stats = false
     }
 }
+
+export default AddPlayersComponent
