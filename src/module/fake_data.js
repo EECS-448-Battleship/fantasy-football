@@ -11,7 +11,10 @@ export const fake_players = [
         "position": "Quarterback",
         "stats": "Passing: 1,856 YDS",
         "image": "https://images.generated.photos/-K9iBY4oOkLsqQfoTA1R8X0EKvR_BCbMXk0KNX4EIIs/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA0NzY1MjkuanBn.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 7,
@@ -19,7 +22,10 @@ export const fake_players = [
         "position": "Quarterback",
         "stats": "Passing: 856 YDS",
         "image": "https://images.generated.photos/EUa6Hmnt6682dl03Q5FPIeMqLnS833rfzOJaJXlYxqI/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAxNTk3OTFfMDU1/Nzg5OF8wMzgzMzIw/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 3,
@@ -27,7 +33,10 @@ export const fake_players = [
         "position": "Quarterback",
         "stats": "Passing: 758 YDS",
         "image": "https://images.generated.photos/eGoWRgqxtahGFDAD81-l8CNxdz1oe-huz3CQ7m3v0VI/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAzNDA0NDlfMDgz/MDY1Nl8wMTk4NTI4/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
 
     },
     {
@@ -36,7 +45,10 @@ export const fake_players = [
         "position": "Running back",
         "stats": "1,368 YDS",
         "image": "https://images.generated.photos/fd8kkioB4vLw_5MGwQXdDt9Q7Ley2_Ia8Cu390zaNVM/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA0Nzg2ODEuanBn.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 21,
@@ -44,7 +56,10 @@ export const fake_players = [
         "position": "Running back",
         "stats": "1,842 YDS",
         "image": "https://images.generated.photos/PEBx5b8_iPHU_nJpJbh3geUN8cBFglHVAAR9NktzXsk/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAxODI1NzlfMDgx/MTA0OV8wNDQzOTM5/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 20,
@@ -52,7 +67,10 @@ export const fake_players = [
         "position": "Running back",
         "stats": "1,623 YDS",
         "image": "https://images.generated.photos/cb3jAo-GBziFLxs85KJGt7a8bJdhz4sSy76PYAXkeg4/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA1ODU4MDBfMDMy/NjY2OF8wODEwNTA2/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 85,
@@ -60,7 +78,10 @@ export const fake_players = [
         "position": "Wide receiver",
         "stats": "666 YDS",
         "image": "https://images.generated.photos/LLiy3FypH5A1suda78U82t_Kcn9AlJwZt1g3w1p5DwE/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAzODc0NjlfMDUy/MDc0NF8wNzc3NzQ5/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 19,
@@ -68,7 +89,10 @@ export const fake_players = [
         "position": "Wide receiver",
         "stats": "256 YDS",
         "image": "https://images.generated.photos/dW84LNLE4Kzp73NTTnL68U--dYuq8CCzD-dGTs76U38/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAyNjE1NjZfMDEz/NDM1NF8wMTg5MjI0/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 13,
@@ -76,7 +100,10 @@ export const fake_players = [
         "position": "Wide receiver",
         "stats": "13 YDS",
         "image": "https://images.generated.photos/erudOopARQnXWNaLqkIPRLLMLAVBr8m70aFC_dtYu1Y/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAzODA5MTVfMDkx/MzIzN18wNDQxMTk4/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
 
     },
     {
@@ -85,7 +112,10 @@ export const fake_players = [
         "position": "Wide receiver",
         "stats": "25 YDS",
         "image": "https://images.generated.photos/WFV4nHHq5ZaBb1rdmFL5WEZTOanckWHEfkmDA1fOVfw/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAxNTYzNzNfMDI4/Nzc2N18wNzYxNDY3/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 17,
@@ -93,7 +123,10 @@ export const fake_players = [
         "position": "Wide receiver",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/PEBx5b8_iPHU_nJpJbh3geUN8cBFglHVAAR9NktzXsk/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAxODI1NzlfMDgx/MTA0OV8wNDQzOTM5/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 11,
@@ -101,21 +134,30 @@ export const fake_players = [
         "position": "Wide receiver",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/fd8kkioB4vLw_5MGwQXdDt9Q7Ley2_Ia8Cu390zaNVM/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA0Nzg2ODEuanBn.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 80,
         "name": "Blake Bell",
         "position": "Tight end",
         "image": "https://images.generated.photos/eGoWRgqxtahGFDAD81-l8CNxdz1oe-huz3CQ7m3v0VI/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAzNDA0NDlfMDgz/MDY1Nl8wMTk4NTI4/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 84,
         "name": "Sean McKeon",
         "position": "Tight end",
         "image": "https://images.generated.photos/EUa6Hmnt6682dl03Q5FPIeMqLnS833rfzOJaJXlYxqI/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAxNTk3OTFfMDU1/Nzg5OF8wMzgzMzIw/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 86,
@@ -123,7 +165,10 @@ export const fake_players = [
         "position": "Tight end",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/-K9iBY4oOkLsqQfoTA1R8X0EKvR_BCbMXk0KNX4EIIs/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA0NzY1MjkuanBn.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 63,
@@ -131,7 +176,10 @@ export const fake_players = [
         "position": "Offensive lineman",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/cb3jAo-GBziFLxs85KJGt7a8bJdhz4sSy76PYAXkeg4/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA1ODU4MDBfMDMy/NjY2OF8wODEwNTA2/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 69,
@@ -139,7 +187,10 @@ export const fake_players = [
         "position": "Offensive lineman",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/LLiy3FypH5A1suda78U82t_Kcn9AlJwZt1g3w1p5DwE/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAzODc0NjlfMDUy/MDc0NF8wNzc3NzQ5/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 70,
@@ -147,7 +198,10 @@ export const fake_players = [
         "position": "Offensive lineman",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/dW84LNLE4Kzp73NTTnL68U--dYuq8CCzD-dGTs76U38/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAyNjE1NjZfMDEz/NDM1NF8wMTg5MjI0/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 66,
@@ -155,7 +209,10 @@ export const fake_players = [
         "position": "Offensive lineman",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/erudOopARQnXWNaLqkIPRLLMLAVBr8m70aFC_dtYu1Y/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAzODA5MTVfMDkx/MzIzN18wNDQxMTk4/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 64,
@@ -163,7 +220,10 @@ export const fake_players = [
         "position": "Offensive lineman",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/WFV4nHHq5ZaBb1rdmFL5WEZTOanckWHEfkmDA1fOVfw/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAxNTYzNzNfMDI4/Nzc2N18wNzYxNDY3/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 78,
@@ -171,7 +231,10 @@ export const fake_players = [
         "position": "Offensive lineman",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/PEBx5b8_iPHU_nJpJbh3geUN8cBFglHVAAR9NktzXsk/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAxODI1NzlfMDgx/MTA0OV8wNDQzOTM5/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 52,
@@ -179,7 +242,10 @@ export const fake_players = [
         "position": "Offensive lineman",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/fd8kkioB4vLw_5MGwQXdDt9Q7Ley2_Ia8Cu390zaNVM/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA0Nzg2ODEuanBn.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 56,
@@ -187,7 +253,10 @@ export const fake_players = [
         "position": "Defensive lineman",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/eGoWRgqxtahGFDAD81-l8CNxdz1oe-huz3CQ7m3v0VI/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAzNDA0NDlfMDgz/MDY1Nl8wMTk4NTI4/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 92,
@@ -195,7 +264,10 @@ export const fake_players = [
         "position": "Defensive lineman",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/EUa6Hmnt6682dl03Q5FPIeMqLnS833rfzOJaJXlYxqI/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAxNTk3OTFfMDU1/Nzg5OF8wMzgzMzIw/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 98,
@@ -203,7 +275,10 @@ export const fake_players = [
         "position": "Defensive lineman",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/-K9iBY4oOkLsqQfoTA1R8X0EKvR_BCbMXk0KNX4EIIs/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA0NzY1MjkuanBn.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 96,
@@ -211,7 +286,10 @@ export const fake_players = [
         "position": "Defensive lineman",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/cb3jAo-GBziFLxs85KJGt7a8bJdhz4sSy76PYAXkeg4/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA1ODU4MDBfMDMy/NjY2OF8wODEwNTA2/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 94,
@@ -219,7 +297,10 @@ export const fake_players = [
         "position": "Defensive lineman",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/LLiy3FypH5A1suda78U82t_Kcn9AlJwZt1g3w1p5DwE/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAzODc0NjlfMDUy/MDc0NF8wNzc3NzQ5/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 97,
@@ -227,7 +308,10 @@ export const fake_players = [
         "position": "Defensive lineman",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/dW84LNLE4Kzp73NTTnL68U--dYuq8CCzD-dGTs76U38/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAyNjE1NjZfMDEz/NDM1NF8wMTg5MjI0/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 79,
@@ -235,7 +319,10 @@ export const fake_players = [
         "position": "Defensive lineman",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/erudOopARQnXWNaLqkIPRLLMLAVBr8m70aFC_dtYu1Y/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAzODA5MTVfMDkx/MzIzN18wNDQxMTk4/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 90,
@@ -243,7 +330,10 @@ export const fake_players = [
         "position": "Defensive lineman",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/WFV4nHHq5ZaBb1rdmFL5WEZTOanckWHEfkmDA1fOVfw/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAxNTYzNzNfMDI4/Nzc2N18wNzYxNDY3/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 95,
@@ -251,7 +341,10 @@ export const fake_players = [
         "position": "Defensive lineman",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/PEBx5b8_iPHU_nJpJbh3geUN8cBFglHVAAR9NktzXsk/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAxODI1NzlfMDgx/MTA0OV8wNDQzOTM5/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 58,
@@ -259,7 +352,10 @@ export const fake_players = [
         "position": "Defensive lineman",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/fd8kkioB4vLw_5MGwQXdDt9Q7Ley2_Ia8Cu390zaNVM/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA0Nzg2ODEuanBn.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 99,
@@ -267,7 +363,10 @@ export const fake_players = [
         "position": "Defensive lineman",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/eGoWRgqxtahGFDAD81-l8CNxdz1oe-huz3CQ7m3v0VI/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAzNDA0NDlfMDgz/MDY1Nl8wMTk4NTI4/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 57,
@@ -275,7 +374,10 @@ export const fake_players = [
         "position": "Linebacker",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/EUa6Hmnt6682dl03Q5FPIeMqLnS833rfzOJaJXlYxqI/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAxNTk3OTFfMDU1/Nzg5OF8wMzgzMzIw/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 59,
@@ -283,7 +385,10 @@ export const fake_players = [
         "position": "Linebacker",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/-K9iBY4oOkLsqQfoTA1R8X0EKvR_BCbMXk0KNX4EIIs/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA0NzY1MjkuanBn.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 54,
@@ -291,7 +396,10 @@ export const fake_players = [
         "position": "Linebacker",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/cb3jAo-GBziFLxs85KJGt7a8bJdhz4sSy76PYAXkeg4/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA1ODU4MDBfMDMy/NjY2OF8wODEwNTA2/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 53,
@@ -299,7 +407,10 @@ export const fake_players = [
         "position": "Linebacker",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/LLiy3FypH5A1suda78U82t_Kcn9AlJwZt1g3w1p5DwE/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAzODc0NjlfMDUy/MDc0NF8wNzc3NzQ5/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 48,
@@ -307,7 +418,10 @@ export const fake_players = [
         "position": "Linebacker",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/dW84LNLE4Kzp73NTTnL68U--dYuq8CCzD-dGTs76U38/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAyNjE1NjZfMDEz/NDM1NF8wMTg5MjI0/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 55,
@@ -315,7 +429,10 @@ export const fake_players = [
         "position": "Linebacker",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/erudOopARQnXWNaLqkIPRLLMLAVBr8m70aFC_dtYu1Y/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAzODA5MTVfMDkx/MzIzN18wNDQxMTk4/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 30,
@@ -323,7 +440,10 @@ export const fake_players = [
         "position": "Defensive back",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/WFV4nHHq5ZaBb1rdmFL5WEZTOanckWHEfkmDA1fOVfw/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAxNTYzNzNfMDI4/Nzc2N18wNzYxNDY3/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 27,
@@ -331,7 +451,10 @@ export const fake_players = [
         "position": "Defensive back",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/PEBx5b8_iPHU_nJpJbh3geUN8cBFglHVAAR9NktzXsk/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAxODI1NzlfMDgx/MTA0OV8wNDQzOTM5/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 29,
@@ -339,7 +462,10 @@ export const fake_players = [
         "position": "Defensive back",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/fd8kkioB4vLw_5MGwQXdDt9Q7Ley2_Ia8Cu390zaNVM/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA0Nzg2ODEuanBn.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 26,
@@ -347,7 +473,10 @@ export const fake_players = [
         "position": "Defensive back",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/eGoWRgqxtahGFDAD81-l8CNxdz1oe-huz3CQ7m3v0VI/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAzNDA0NDlfMDgz/MDY1Nl8wMTk4NTI4/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 40,
@@ -355,7 +484,10 @@ export const fake_players = [
         "position": "Defensive back",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/EUa6Hmnt6682dl03Q5FPIeMqLnS833rfzOJaJXlYxqI/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAxNTk3OTFfMDU1/Nzg5OF8wMzgzMzIw/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 41,
@@ -363,7 +495,10 @@ export const fake_players = [
         "position": "Defensive back",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/-K9iBY4oOkLsqQfoTA1R8X0EKvR_BCbMXk0KNX4EIIs/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA0NzY1MjkuanBn.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 23,
@@ -371,7 +506,10 @@ export const fake_players = [
         "position": "Defensive back",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/cb3jAo-GBziFLxs85KJGt7a8bJdhz4sSy76PYAXkeg4/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA1ODU4MDBfMDMy/NjY2OF8wODEwNTA2/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 37,
@@ -379,7 +517,10 @@ export const fake_players = [
         "position": "Defensive back",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/LLiy3FypH5A1suda78U82t_Kcn9AlJwZt1g3w1p5DwE/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAzODc0NjlfMDUy/MDc0NF8wNzc3NzQ5/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 25,
@@ -387,7 +528,10 @@ export const fake_players = [
         "position": "Defensive back",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/dW84LNLE4Kzp73NTTnL68U--dYuq8CCzD-dGTs76U38/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAyNjE1NjZfMDEz/NDM1NF8wMTg5MjI0/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 28,
@@ -395,7 +539,10 @@ export const fake_players = [
         "position": "Defensive back",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/erudOopARQnXWNaLqkIPRLLMLAVBr8m70aFC_dtYu1Y/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAzODA5MTVfMDkx/MzIzN18wNDQxMTk4/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 6,
@@ -403,7 +550,10 @@ export const fake_players = [
         "position": "Special team",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/WFV4nHHq5ZaBb1rdmFL5WEZTOanckWHEfkmDA1fOVfw/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAxNTYzNzNfMDI4/Nzc2N18wNzYxNDY3/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 91,
@@ -411,7 +561,10 @@ export const fake_players = [
         "position": "Special team",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/PEBx5b8_iPHU_nJpJbh3geUN8cBFglHVAAR9NktzXsk/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAxODI1NzlfMDgx/MTA0OV8wNDQzOTM5/LmpwZw.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     },
     {
         "number": 2,
@@ -419,6 +572,9 @@ export const fake_players = [
         "position": "Special team",
         "stats": "551 YDS",
         "image": "https://images.generated.photos/fd8kkioB4vLw_5MGwQXdDt9Q7Ley2_Ia8Cu390zaNVM/rs:fit:128:128/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA0Nzg2ODEuanBn.jpg",
-        "showing_stats": false
+        "showing_stats": false,
+        "points": 0,
+        "speed": 0,
+        "price": "$0.00",
     }
 ]

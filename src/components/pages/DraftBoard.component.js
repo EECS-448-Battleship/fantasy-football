@@ -1,6 +1,7 @@
 import {Component} from '../../../lib/vues6.js'
 import {fake_players} from '../../module/fake_data.js'
 import {GridCellRenderType} from '../Grid.component.js'
+import {clone} from '../../module/util.js'
 
 const template = `
 <div class="page-draft-board">
@@ -66,7 +67,7 @@ class DraftBoardComponent extends Component {
         },
     ]
 
-    data = fake_players
+    data = clone(fake_players)
 
     async vue_on_create() {
 
