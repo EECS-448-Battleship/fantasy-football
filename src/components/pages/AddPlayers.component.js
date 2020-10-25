@@ -30,7 +30,35 @@ const template = `
                         </div>
                     </div>
                     <div class="item-contents" style="flex: 1;" v-else>
-                        Hi! Show stats here.
+                        <div v-if="player.position === 'Quarterback'">
+                            <h2> Specific Stats for QB Here </h2>
+                        </div>
+                        <div v-if="player.position === 'Running back'">
+                            <h2> Specific Stats for RB Here </h2>
+                        </div>  
+                        <div v-if="player.position === 'Wide receiver'">
+                            <h2>Specific Specific for WR Stats Here</h2>
+                        </div>
+                        <div v-if="player.position === 'Tight end'">
+                            <h2> Specific Stats for TE Here </h2>
+                        </div>
+                        <div v-if="player.position === 'Offensive lineman'">
+                            <h2> Specific Stats for OL Here </h2>
+                        </div>
+                        <div v-if="player.position === 'Defensive lineman'">
+                            <h2> Specific Stats for DL Here </h2>
+                        </div>
+                        <div v-if="player.position === 'Linebacker'">
+                            <h2> Specific Stats for LB Here </h2>
+                        </div>
+                        <div v-if="player.position === 'Defensive back'">
+                            <h2> Specific Stats for DB Here </h2>
+                        </div>
+                        <div v-if="player.position === 'Special team'">
+                            <h2> Specific Stats for ST Here </h2>
+                        </div>                                     
+                    </div>
+                    </div>
                     </div>
                     <div class="item-button">
                         <button
