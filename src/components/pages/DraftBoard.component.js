@@ -56,6 +56,26 @@ class DraftBoardComponent extends Component {
         {
             header: 'Stats',
             key: 'stats',
+            type: GridCellRenderType.HTML,
+            renderer: (value, row) => {
+                const stats = []
+                for ( const stat in value ) {
+                    if ( !value.hasOwnProperty(stat) ) continue; // Prototypical member
+
+                    stats.push(`
+                        <div class="stat">
+                            <div class="title">${stat}</div>
+                            <div>${value[stat]}</div>
+                        </div>
+                    `)
+                }
+
+                return `
+                    <div class="stats">
+                        ${stats.join('\n')}
+                    </div>
+                `
+            },
         },
     ]
 
