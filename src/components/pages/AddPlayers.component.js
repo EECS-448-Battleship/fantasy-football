@@ -16,66 +16,36 @@ const template = `
         </div>
     </div>
     <div class="item-grid">
-        <div class="item" v-for="player of filtered_players">
-            <div  @mouseover="on_photo_hover(player)"
+        <div class="item" v-for="player of filtered_players" @mouseover="on_photo_hover(player)"
             @mouseleave="on_photo_leave(player)">
             <div style="display: flex; flex-direction: column; height: 100%;">
-                    <div class="item-icon" v-if="!player.showing_stats">
-                        <img :src="player.image" :alt="player.name">
-                    </div>   
-                    <div class="item-contents" v-if="!player.showing_stats">
-                        <h1>{{ player.name }}</h1>
-                        <p>#{{ player.number }} ({{ player.position }})</p>
-                        <div class="moreStats">
-                            <p>{{ player.stats }}</p>
-                        </div>
-                    </div>
-                    <div class="item-contents" style="flex: 1;" v-else>
-                        <div v-if="player.position === 'Quarterback'">
-                            <h2> Specific Stats for QB Here </h2>
-                        </div>
-                        <div v-if="player.position === 'Running back'">
-                            <h2> Specific Stats for RB Here </h2>
-                        </div>  
-                        <div v-if="player.position === 'Wide receiver'">
-                            <h2>Specific Specific for WR Stats Here</h2>
-                        </div>
-                        <div v-if="player.position === 'Tight end'">
-                            <h2> Specific Stats for TE Here </h2>
-                        </div>
-                        <div v-if="player.position === 'Offensive lineman'">
-                            <h2> Specific Stats for OL Here </h2>
-                        </div>
-                        <div v-if="player.position === 'Defensive lineman'">
-                            <h2> Specific Stats for DL Here </h2>
-                        </div>
-                        <div v-if="player.position === 'Linebacker'">
-                            <h2> Specific Stats for LB Here </h2>
-                        </div>
-                        <div v-if="player.position === 'Defensive back'">
-                            <h2> Specific Stats for DB Here </h2>
-                        </div>
-                        <div v-if="player.position === 'Special team'">
-                            <h2> Specific Stats for ST Here </h2>
-                        </div>                                     
+                <div class="item-icon" v-if="!player.showing_stats">
+                    <img :src="player.image" :alt="player.name">
+                </div>
+                <div class="item-contents" v-if="!player.showing_stats">
+                    <h1>{{ player.name }}</h1>
+                    <p>#{{ player.number }} ({{ player.position }})</p>
+                </div>
+                <div class="item-contents" style="flex: 1;" v-else>
+                    <div>
+                        <p v-if="player.team_name"><b>Team: </b> {{ player.team_name }}</p>
+                        <p><b>Position: </b> {{ player.position }}</p>
+                        <p v-for="(value, stat) in player.stats"><b>{{ stat }}: </b> {{ value }}</p>
                     </div>
                 </div>
-            </div>                    
-                    <div class="item-button">
-                        <button
-                            v-if="my_team.length < 15 && !my_team.includes(player)"
-                            @click="add_to_team(player)"
-                            class="add"
-                        >Add to Team</button>
-                        <button
-                            v-if="my_team.includes(player)"
-                            @click="remove_from_team(player)"
-                            class="remove"
-                        >Remove from Team</button>
-                    </div>
             </div>
-            </div>           
-
+            <div class="item-button">
+                <button
+                    v-if="my_team.length < 15 && !my_team.includes(player)"
+                    @click="add_to_team(player)"
+                    class="add"
+                >Add to Team</button>
+                <button
+                    v-if="my_team.includes(player)"
+                    @click="remove_from_team(player)"
+                    class="remove"
+                >Remove from Team</button>
+            </div>
         </div>
     </div>
 </div>
