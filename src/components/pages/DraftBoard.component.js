@@ -10,8 +10,16 @@ const template = `
             <h2>Draft Board</h2>
         </div>
     </div>
-    <div class="body">
+    <div class="body" style="display: flex; flex-direction: row">
+        <div class="picks" style="margin-right: 20px;">
+            <app-grid
+                :column_defs="top_picks_column_defs"
+                :data="top_picks"
+                :show_row_numbers="true"
+            ></app-grid>
+        </div>
         <app-grid
+            style="flex: 1"
             :column_defs="column_defs"
             :data="data"
             :show_row_numbers="false"
@@ -28,6 +36,22 @@ class DraftBoardComponent extends Component {
     static get selector() { return 'page-draft-board' }
     static get template() { return template }
     static get props() { return [] }
+
+    top_picks_column_defs = [
+        {
+            header: 'Player',
+            key: 'name',
+            type: GridCellRenderType.HTML,
+            renderer: (_, data) => `
+                <div class="center">
+                    <img src="${data.image}" alt="${data.name}" height="50" style="border-radius: 50%">
+                    <span>${data.name}</span>
+                </div>
+            `,
+        }
+    ]
+
+    top_picks = []
 
     column_defs = [
         {
@@ -75,6 +99,18 @@ class DraftBoardComponent extends Component {
                         ${stats.join('\n')}
                     </div>
                 `
+            },
+        },
+        {
+            header: '',
+            key: 'stats',
+            type: GridCellRenderType.Component,
+            component: Vue.component('app-action-button'),
+            button_color: (row, col) => '#CC5746',
+            button_text: (row, col) => 'Draft',
+            button_hidden: (row, col) => this.top_picks.includes(row),
+            on_click: (row, col) => {
+                this.top_picks.push(row);
             },
         },
     ]
